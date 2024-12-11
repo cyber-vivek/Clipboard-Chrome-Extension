@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Clipboard Manager",
+  "version": "1.0",
+  "description": "Tracks and lists past copied texts.",
+  "permissions": ["clipboardRead", "clipboardWrite", "storage"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+  {
+    "matches": ["<all_urls>"],
+    "js": ["clipboard-content.js"]
+  }
+]
+}

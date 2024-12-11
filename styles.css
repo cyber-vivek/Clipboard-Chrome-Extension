@@ -1,0 +1,84 @@
+html{
+  width: 780px;  /* max: 800px */
+  height: 600px; /* max: 600px */
+}
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 10px;
+}
+
+h1 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  margin: 5px 0;
+  background: #f4f4f4;
+  padding: 5px;
+  border-radius: 3px;
+  word-break: break-word;
+}
+.list-item {
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
+  cursor: pointer;
+  align-items: center;
+  padding: 15px;
+}
+.list-item button {
+  min-width: fit-content;
+  cursor: pointer;
+  color: #090909;
+  padding: 0.7em 1.7em;
+  font-size: 12px;
+  border-radius: 0.5em;
+  background: #e8e8e8;
+  border: 1px solid #e8e8e8;
+  transition: all 0.3s;
+  box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
+}
+
+.list-item button:active {
+  color: #666;
+  box-shadow: inset 4px 4px 12px #c5c5c5, inset -4px -4px 12px #ffffff;
+}
+.delete-icon {
+  width: 25px;
+  padding: 5px;
+  border-radius: 50px;
+  background: #e8e8e8;
+  border: 1px solid #e8e8e8;
+  transition: all 0.3s;
+  box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
+}
+.delete-icon:active {
+  color: #666;
+  box-shadow: inset 4px 4px 12px #c5c5c5, inset -4px -4px 12px #ffffff;
+}
+
+/* Toast */
+.toastify {
+  padding: 12px 20px;
+  color: #ffffff;
+  display: inline-block;
+  box-shadow: 0 3px 6px -1px rgba(0, 0, 0, 0.12), 0 10px 36px -4px rgba(77, 96, 232, 0.3);
+  background: -webkit-linear-gradient(315deg, #73a5ff, #5477f5);
+  background: linear-gradient(135deg, #73a5ff, #5477f5);
+  position: fixed;
+  top: -150px;
+  right: 15px;
+  opacity: 0;
+  transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
+  border-radius: 2px;
+  cursor: pointer;
+}
+.toastify.on { opacity: 1; }
